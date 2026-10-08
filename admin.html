@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel - ANISU PRODUCTS HUB</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN BOX -->
+<div id="login-box" class="login-box">
+  <h2>🔐 Admin Login</h2>
+  <p>Enter your credentials to continue</p>
+  <form id="login-form">
+    <div class="form-group">
+      <label class="form-label">Email</label>
+      <input type="email" class="form-input" id="admin-email" required>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Password</label>
+      <input type="password" class="form-input" id="admin-password" required>
+    </div>
+    <button type="submit" class="btn-submit">Login</button>
+  </form>
+</div>
+
+<!-- ADMIN PANEL -->
+<div id="admin-panel" class="hidden">
+  <div class="admin-header">
+    <h1>ANISU HUB Admin</h1>
+    <button class="btn-logout" id="logout-btn">Logout</button>
+  </div>
+
+  <div class="admin-tabs">
+    <button class="admin-tab active" data-target="orders-section">📦 Orders</button>
+    <button class="admin-tab" data-target="products-section">🛍 Products</button>
+    <button class="admin-tab" data-target="add-section">➕ Add Product</button>
+  </div>
+
+  <div class="admin-content">
+
+    <!-- ORDERS -->
+    <div id="orders-section" class="admin-section">
+      <h2 style="margin-bottom:16px;">All Orders</h2>
+      <div id="orders-list" class="loader">Loading orders...</div>
+    </div>
+
+    <!-- PRODUCTS LIST -->
+    <div id="products-section" class="admin-section hidden">
+      <h2 style="margin-bottom:16px;">Your Products</h2>
+      <div id="admin-products-list" class="loader">Loading...</div>
+    </div>
+
+    <!-- ADD PRODUCT -->
+    <div id="add-section" class="admin-section hidden">
+      <h2 style="margin-bottom:16px;">Add New Product</h2>
+      <form id="product-form" class="product-form">
+        <div class="form-group">
+          <label class="form-label">Product Name <span class="required">*</span></label>
+          <input type="text" class="form-input" id="p-name" placeholder="e.g. Canva Pro 1 Year" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Description</label>
+          <textarea class="form-input" id="p-description" rows="2" placeholder="Short description..."></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Features (one per line)</label>
+          <textarea class="form-input" id="p-features" rows="4" placeholder="100% stable&#10;No logout issue&#10;Full warranty"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Price USD <span class="required">*</span></label>
+          <input type="number" step="0.01" class="form-input" id="p-price-usd" placeholder="e.g. 2" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Price PKR <span class="required">*</span></label>
+          <input type="number" class="form-input" id="p-price-pkr" placeholder="e.g. 500" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Product Image</label>
+          <input type="file" class="form-input" id="p-image" accept="image/*">
+        </div>
+        <button type="submit" class="btn-submit" id="add-product-btn">Add Product</button>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>

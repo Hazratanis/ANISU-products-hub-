@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ANISU PRODUCTS HUB - Premium Digital Products</title>
+<meta name="description" content="Premium AI Tools, Subscriptions & Digital Products">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="logo">ANISU <span>PRODUCTS HUB</span> 💎</div>
+  <p class="tagline">Premium AI Tools, Subscriptions & Digital Products for Content Creators</p>
+</header>
+
+<!-- TABS -->
+<div class="tabs">
+  <button class="tab active" onclick="showTab('products')">🛠 AI Tools</button>
+  <button class="tab" onclick="showTab('reviews')">⭐ Reviews</button>
+</div>
+
+<!-- CONTAINER -->
+<div class="container">
+
+  <!-- PRODUCTS TAB -->
+  <div id="products-tab">
+    <div id="products-list" class="loader">Loading products...</div>
+  </div>
+
+  <!-- REVIEWS TAB -->
+  <div id="reviews-tab" class="hidden">
+    <div class="reviews-header">
+      <h2 class="reviews-title">Customer Reviews</h2>
+      <div class="reviews-stars">
+        <span class="stars">★★★★★</span>
+        <span class="reviews-count">4.9 from 98 reviews</span>
+      </div>
+      <button class="btn-write-review" onclick="openReviewForm()">✏️ Write a Review</button>
+    </div>
+    <div id="reviews-list"></div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  © 2026 ANISU PRODUCTS HUB. All rights reserved.
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/923000000000" class="whatsapp-float" target="_blank" title="Contact on WhatsApp">💬</a>
+
+<!-- JAVASCRIPT -->
+<script type="module" src="script.js"></script>
+
+</body>
+</html>
